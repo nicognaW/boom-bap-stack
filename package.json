@@ -9,7 +9,8 @@
     "lint": "bunx @biomejs/biome lint .",
     "format": "bunx dprint fmt",
     "start": "http-server build/client/",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "postinstall": "lefthook install"
   },
   "dependencies": {
     "@biomejs/biome": "1.5.3",
@@ -17,6 +18,7 @@
     "@remix-run/react": "^2.6.0",
     "dprint": "^0.45.0",
     "http-server": "^14.1.1",
+    "lefthook": "^1.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
