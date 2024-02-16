@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 
+// noinspection JSUnusedGlobalSymbols
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix SPA" },
