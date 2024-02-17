@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@biomejs/biome": "1.5.3",
+    "@logto/react": "^2.2.4",
     "@remix-run/node": "^2.6.0",
     "@remix-run/react": "^2.6.0",
     "dprint": "^0.45.0",

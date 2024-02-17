@@ -1,5 +1,10 @@
+import { LogtoConfig, LogtoProvider } from "@logto/react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 
+const config: LogtoConfig = {
+  endpoint: "https://1ried1.logto.app/",
+  appId: "xwqroef0gyjrcwuh6g0ow",
+};
 // noinspection JSUnusedGlobalSymbols
 export default function App() {
   return (
@@ -12,9 +17,11 @@ export default function App() {
         <title>DEV</title>
       </head>
       <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
+        <LogtoProvider config={config}>
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+        </LogtoProvider>
       </body>
     </html>
   );
@@ -32,7 +39,6 @@ export function HydrateFallback() {
         <title>Loading</title>
       </head>
       <body>
-        <p>Loading...</p>
         <Scripts />
       </body>
     </html>
