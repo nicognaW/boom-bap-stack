@@ -12,4 +12,6 @@ export default function Callback() {
   if (isLoading) {
     return <div>Redirecting...</div>;
   }
+  navigate("/");
+  return <div>Invalid callback, redirecting to the root.</div>;
 }
