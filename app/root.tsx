@@ -1,5 +1,6 @@
 import { LogtoConfig, LogtoProvider } from "@logto/react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import "./tailwind.css";
 
 const config: LogtoConfig = {
   endpoint: "https://1ried1.logto.app/",
@@ -16,7 +17,7 @@ export default function App() {
         <Links />
         <title>DEV</title>
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <LogtoProvider config={config}>
           <Outlet />
           <ScrollRestoration />

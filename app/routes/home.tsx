@@ -25,14 +25,33 @@ export default function Index() {
   }, [getIdTokenClaims, isAuthenticated]);
 
   return (
-    <div>
-      <h1 className="text-5xl font-bold border-4 text-red-600 inline-block underline">
-        Hello world!
-      </h1>
-      {userId && <p>Logged in as {userId}</p>}
-      {isAuthenticated
-        ? <SignOut />
-        : <SignIn />}
+    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+      <h1>Welcome to Remix (SPA Mode)</h1>
+      <div>
+        {userId && <p>Logged in as {userId}</p>}
+        {isAuthenticated
+          ? <SignOut />
+          : <button type={"button"} onClick={() => signIn("http://localhost:5173/callback")}>Sign In</button>}
+      </div>
+      <ul>
+        <li>
+          <SignIn />
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://remix.run/future/spa-mode"
+            rel="noreferrer"
+          >
+            SPA Mode Guide
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
+            Remix Docs
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }
